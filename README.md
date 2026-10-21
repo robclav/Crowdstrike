@@ -1,7 +1,7 @@
 # Network Vulnerability Assesment Dashboard
 
 <p align="center">
-  <img src="docs/radar-logo.png" alt="Exposure Management Dashboard" width="120" />
+  <img src="docs/radar-logo.png" alt="Network Vulnerability Assesment Dashboard" width="120" />
 </p>
 
 <p align="center">
@@ -67,7 +67,7 @@ Listado de scans/scan-runs con detalle por appliance y filtros por estado.
 ```
 .
 ├── dist/
-│   └── exposure-mgmt-dashboard-v0.26.33.tar.gz   ← App empaquetada lista para subir a Foundry
+│   └── network-vulnerability-assesment-dashboard-v0.26.33.tar.gz   ← App empaquetada lista para subir a Foundry
 ├── docs/
 │   ├── radar-logo.png
 │   └── screenshots/
@@ -92,7 +92,7 @@ Listado de scans/scan-runs con detalle por appliance y filtros por estado.
 
 ### Pasos
 
-1. Descarga `dist/exposure-mgmt-dashboard-v0.26.33.tar.gz` desde este repositorio.
+1. Descarga `dist/network-vulnerability-assesment-dashboard-v0.26.33.tar.gz` desde este repositorio.
 2. En la consola de Falcon, abre **Foundry → App Manager → Import app**.
 3. Selecciona el `.tar.gz` descargado y confirma la importación.
 4. Cuando la importación termine, Foundry lanzará el asistente de credenciales por cada integración API — proporciona un API Client con los scopes anteriores.
