@@ -9,11 +9,14 @@ Repositorio público con bundles empaquetados (`.tar.gz`) de aplicaciones [Falco
 | App | Descripción | Documentación |
 | --- | --- | --- |
 | **[NVA](NVA/)** — Network Vulnerability Assesment Dashboard | Dashboard unificado de gestión mensual de vulnerabilidades (FEM + NVA + Spotlight + Discover + Alerts v2 + NG-SIEM) | [NVA/README.md](NVA/README.md) |
+| **[soc-dashboard](soc-dashboard/)** — Agentic SOC Oversight Dashboard | Videowall SOC en tiempo real con 15 widgets (threat volume, MITRE ATT&CK, agent health, backlog, feed silence, Charlotte AI credits…) | [soc-dashboard/README.md](soc-dashboard/README.md) |
 
 ## Políticas
 
-- 🔐 Reporte de seguridad: [SECURITY.md](SECURITY.md)
-- 📄 Licencia: [MIT](LICENSE)
+Cada app lleva su propia licencia y política de seguridad:
+
+- NVA: [LICENSE](NVA/LICENSE) · [SECURITY.md](NVA/SECURITY.md)
+- soc-dashboard: ver [soc-dashboard/](soc-dashboard/)
 
 ## Autor
 
