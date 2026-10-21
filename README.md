@@ -1,4 +1,4 @@
-# Exposure Management Dashboard
+# Network Vulnerability Assesment Dashboard
 
 <p align="center">
   <img src="docs/radar-logo.png" alt="Exposure Management Dashboard" width="120" />
