@@ -18,7 +18,7 @@
 
 ## 📖 Descripción
 
-**Exposure Management Dashboard** es una aplicación de [Falcon Foundry](https://www.crowdstrike.com/platform/falcon-foundry/) que unifica en una sola vista toda la información de gestión de exposición y vulnerabilidades disponible en la plataforma CrowdStrike Falcon:
+**Network Vulnerability Assesment Dashboard** es una aplicación de [Falcon Foundry](https://www.crowdstrike.com/platform/falcon-foundry/) que unifica en una sola vista toda la información de gestión de exposición y vulnerabilidades disponible en la plataforma CrowdStrike Falcon:
 
 - 🔭 **Falcon Exposure Management (FEM)** — activos externos e internos
 - 🛰️ **Falcon Network Vulnerability Assessment (NVA / Network Scanner)** — escaneos de red, escáneres (appliances), redes/zonas y detecciones
