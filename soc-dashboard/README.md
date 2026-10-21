@@ -5,89 +5,89 @@
 </p>
 
 <p align="center">
-  <strong>Videowall en tiempo real para equipos SOC construido sobre CrowdStrike Falcon Foundry</strong>
+  <strong>Real-time videowall for SOC teams, built on CrowdStrike Falcon Foundry</strong>
 </p>
 
 <p align="center">
   <a href="https://www.crowdstrike.com/platform/falcon-foundry/"><img src="https://img.shields.io/badge/Falcon-Foundry-ff0000" alt="Falcon Foundry"></a>
-  <img src="https://img.shields.io/badge/versión-v0.7.137-blue" alt="Versión">
-  <img src="https://img.shields.io/badge/licencia-MIT-green" alt="Licencia MIT">
+  <img src="https://img.shields.io/badge/version-v0.7.137-blue" alt="Version">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License">
 </p>
 
 ---
 
-## 📖 Descripción
+## 📖 Overview
 
-**Agentic SOC Oversight Dashboard** es una aplicación de [Falcon Foundry](https://www.crowdstrike.com/platform/falcon-foundry/) diseñada como *videowall* para SOC leads y managers. Consolida en una sola vista las métricas clave de operaciones de un SOC moderno sin tener que saltar entre consolas.
+**Agentic SOC Oversight Dashboard** is a [Falcon Foundry](https://www.crowdstrike.com/platform/falcon-foundry/) application designed as a *videowall* for SOC leads and managers. It consolidates key operational metrics for a modern SOC into a single view, with no console-hopping required.
 
-Las métricas se obtienen en vivo de la plataforma Falcon:
+Metrics are pulled live from the Falcon platform:
 
-- 🚨 **Alerts REST API** — volumen, severidad, backlog y edad de alertas (fuente primaria)
-- 💻 **Devices API** — inventario de endpoints, mix de plataformas, distribución de sensor
-- 🔎 **NGSIEM / LogScale** — saved searches para ingestion rate, MITRE y agent activity
-- 🤖 **Charlotte AI** — uso de créditos y top consumidores
-- 🧰 **Fusion Workflows** — ejecuciones de workflows SOAR
+- 🚨 **Alerts REST API** — alert volume, severity, backlog, and age (primary source)
+- 💻 **Devices API** — endpoint inventory, platform mix, sensor distribution
+- 🔎 **NGSIEM / LogScale** — saved searches for ingestion rate, MITRE, and agent activity
+- 🤖 **Charlotte AI** — credit usage and top consumers
+- 🧰 **Fusion Workflows** — SOAR workflow executions
 
-El dashboard refresca automáticamente cada ~1 minuto. Cada widget expone un indicador de estado:
+The dashboard auto-refreshes every ~1 minute. Each widget surfaces a status indicator:
 
-- 🟢 **Verde** — dato live del backend
-- 🟡 **Amarillo** — fallback / mock (API no disponible o tenant vacío)
+- 🟢 **Green** — live data from the backend
+- 🟡 **Yellow** — fallback / mock (API unavailable or empty tenant)
 
-## 📸 Capturas
+## 📸 Screenshots
 
 <p align="center"><img src="docs/screenshots/01-dashboard-overview.png" alt="Dashboard Overview" width="900"></p>
 
-## ✨ Widgets (15 en total)
+## ✨ Widgets (15 total)
 
-El dashboard se organiza en 4 filas temáticas:
+The dashboard is organized into 4 thematic rows:
 
-| Fila | Widgets |
+| Row | Widgets |
 |------|---------|
 | **1. Threat Pulse** | Threat Timeline (24H) · Top Noisy Detections (7D) |
 | **2. Threat Landscape** | SOC Capacity · Alert Backlog Trend (7D) · New Threats Pulse (1H) · Alert Age Distribution |
 | **3. Operational** | Top AI Services (24H) · Dark Hours Monitoring · Agent Health · CrowdStrike Data Ingestion Rate · 3rd-Party Feed Silence |
 | **4. Deep Analytics** | Sensor Hygiene · NIST 800-61 v3 IR Phases · MITRE ATT&CK Coverage (7D) · Top Impacted Hosts (24H) |
 
-Para la descripción detallada de cada widget (qué muestra, cómo leerlo, qué query lo alimenta) consulta **[docs/widget-guide.md](docs/widget-guide.md)**.
+For a detailed description of each widget (what it shows, how to read it, which query feeds it) see **[docs/widget-guide.md](docs/widget-guide.md)**.
 
-### Highlights funcionales
+### Functional highlights
 
-- **3rd-Party Feed Silence**: lista color-coded por vendor con 5 niveles de staleness (<15m / ≥15m / ≥30m / ≥1h / ≥4h), construida combinando `postAggregatesAlertsV2` sobre `source_vendors` + resolución del último `created_timestamp` por vendor.
-- **MITRE ATT&CK Heatmap (7D)**: cobertura de tácticas y técnicas detectadas a partir de alertas.
-- **NIST 800-61 v3 IR Phases**: tracking de actividad de analistas por fase del ciclo de respuesta.
-- **Dark Hours Monitoring**: heatmap de actividad fuera de horario (día de la semana × hora).
-- **Mean Time Metrics**: MTTD / MTT / MTTR calculados en LogScale.
-- **Fallback a mock data** con banner y dot amarillo claramente visibles cuando una fuente falla.
+- **3rd-Party Feed Silence**: per-vendor color-coded list with 5 staleness tiers (<15m / ≥15m / ≥30m / ≥1h / ≥4h), built by combining `postAggregatesAlertsV2` over `source_vendors` with the latest `created_timestamp` per vendor.
+- **MITRE ATT&CK Heatmap (7D)**: coverage of tactics and techniques detected from alerts.
+- **NIST 800-61 v3 IR Phases**: tracking of analyst activity by response-cycle phase.
+- **Dark Hours Monitoring**: off-hours activity heatmap (day-of-week × hour).
+- **Mean Time Metrics**: MTTD / MTT / MTTR computed in LogScale.
+- **Mock-data fallback** with a clearly visible banner and yellow dot when any source fails.
 
-## 📦 Contenido
+## 📦 Contents
 
 ```
 soc-dashboard/
-├── README.md                        ← este fichero
+├── README.md                            ← this file
 ├── dist/
-│   └── soc-dashboard_TUG_BCN.tar.gz ← export de la app para importar en Foundry
+│   └── soc-dashboard-v0.7.137.tar.gz    ← app export, ready to import into Foundry
 └── docs/
-    ├── widget-guide.md              ← guía detallada de los 15 widgets
+    ├── widget-guide.md                  ← detailed guide for the 15 widgets
     ├── logo.png
     └── screenshots/
 ```
 
-> ℹ️ Este repositorio distribuye **solo el bundle empaquetado** (export de Foundry). El código fuente de desarrollo no está publicado aquí.
+> ℹ️ This repository ships **only the packaged bundle** (Foundry export). Development source code is not published here.
 
-## 🚀 Instalación
+## 🚀 Installation
 
-### Requisitos previos
+### Prerequisites
 
-- Tenant de CrowdStrike Falcon con **Falcon Foundry** habilitado.
-- Permisos de administrador para instalar apps desde el *App Manager*.
-- Alcances (scopes) de API habilitados (ya declarados en el `manifest.yml`):
+- A CrowdStrike Falcon tenant with **Falcon Foundry** enabled.
+- Administrator permissions to install apps from the *App Manager*.
+- Enabled API scopes (already declared in `manifest.yml`):
   - `alerts:read`
   - `incidents:read`
   - `detects:read`
   - `devices:read`
   - `host-group:read`
   - `workflow:read`
-  - `message-center:read` *(para /xdr/cases)*
+  - `message-center:read` *(for /xdr/cases)*
   - `cases:read`
   - `discover:read`
   - `zero-trust-assessment:read`
@@ -96,51 +96,51 @@ soc-dashboard/
   - `ioc:read`
   - `cspm-registration:read`
 
-### Pasos
+### Steps
 
-1. Descarga **[`dist/soc-dashboard_TUG_BCN.tar.gz`](dist/soc-dashboard_TUG_BCN.tar.gz)** desde este repositorio.
-2. En la consola de Falcon, abre **Foundry → App Manager → Import app**.
-3. Selecciona el `.tar.gz` y confirma la importación.
-4. Al terminar, Foundry lanzará el asistente de credenciales. Proporciona un API Client con los scopes anteriores.
-5. **Deploy** y **Release** la app desde el App Manager.
-6. La app aparecerá en el launcher de Falcon (nombre: *SOC Dashboard*).
+1. Download **[`dist/soc-dashboard-v0.7.137.tar.gz`](dist/soc-dashboard-v0.7.137.tar.gz)** from this repository.
+2. In the Falcon console, open **Foundry → App Manager → Import app**.
+3. Select the `.tar.gz` and confirm the import.
+4. When finished, Foundry will launch the credential wizard. Provide an API Client with the scopes above.
+5. **Deploy** and **Release** the app from App Manager.
+6. The app will appear in the Falcon launcher (name: *SOC Dashboard*).
 
-> 💡 Al importar en un tenant distinto, Foundry **regenera los IDs internos** (`app_id`, `page_id`, `function_id`, `saved_search_id`). Los valores presentes en el `manifest.yml` dentro del tar.gz son referencias originales que no afectan a la nueva instalación.
+> 💡 When imported into a different tenant, Foundry **regenerates the internal IDs** (`app_id`, `page_id`, `function_id`, `saved_search_id`). The values present in `manifest.yml` inside the tar.gz are the original references and do not affect the new installation.
 
-## 🧰 Stack técnico
+## 🧰 Tech stack
 
 - **Frontend**: React 18 + Vite, [Shoelace Design System](https://shoelace.style/), Chart.js
-- **SDK**: [Foundry-JS](https://developer.crowdstrike.com/foundry) (autenticación OAuth2 y Falcon API)
+- **SDK**: [Foundry-JS](https://developer.crowdstrike.com/foundry) (OAuth2 and Falcon API)
 - **Cloud functions**: Python (FalconPy) — `charlotte-credits-fn`, `incidents-fn`, `devices-fn`, `workflow-executions-fn`
-- **Saved searches**: 18 queries LQL en LogScale/NGSIEM
+- **Saved searches**: 18 LQL queries in LogScale/NGSIEM
 
-## 📝 Changelog destacado
+## 📝 Changelog highlights
 
-Las versiones recientes incluyen:
+Recent versions include:
 
-- **v0.7.137** — Nuevo widget *3rd-Party Feed Silence* con 5 niveles de staleness por vendor
-- **v0.7.136** — Reescritura de *Data Ingestion* para agregar directamente sobre `source_vendors`
-- **v0.7.134** — Separación visual de ingestion CrowdStrike vs 3rd-party
-- **v0.7.65** — Mean Time to Detect/Triage/Resolve en vivo desde LogScale
-- **v0.7.9** — Migración completa a Alerts REST API (267k+ alertas sobre tenant vacío de LogScale)
-- **v0.6.0** — Primera versión con los 15 widgets y layout de 4 filas
+- **v0.7.137** — New *3rd-Party Feed Silence* widget with 5 staleness tiers per vendor
+- **v0.7.136** — *Data Ingestion* rewrite aggregating directly on `source_vendors`
+- **v0.7.134** — Visual separation of CrowdStrike vs 3rd-party ingestion
+- **v0.7.65** — Live Mean Time to Detect/Triage/Resolve from LogScale
+- **v0.7.9** — Full migration to Alerts REST API (267k+ alerts on an empty-LogScale tenant)
+- **v0.6.0** — First release with the 15 widgets and 4-row layout
 
-## 🔐 Seguridad
+## 🔐 Security
 
-Si descubres una vulnerabilidad en la aplicación, por favor **no abras un issue público** — contacta directamente al autor.
+If you find a vulnerability in the application, please **do not open a public issue** — contact the author directly.
 
-Esta aplicación es un desarrollo **community/personal** y no es un producto oficial de CrowdStrike.
+This application is a **community/personal** development and is not an official CrowdStrike product.
 
-## 📄 Licencia
+## 📄 License
 
-Distribuido bajo licencia [MIT](LICENSE).
+Distributed under the [MIT](LICENSE) license.
 
-CrowdStrike®, Falcon® y los nombres de productos relacionados son marcas registradas de CrowdStrike, Inc. Este proyecto es independiente y no está respaldado oficialmente por CrowdStrike.
+CrowdStrike®, Falcon®, and related product names are registered trademarks of CrowdStrike, Inc. This project is independent and is not officially endorsed by CrowdStrike.
 
-## 👤 Autor
+## 👤 Author
 
 **Roberto Clavero**
 
 ---
 
-<p align="center"><sub>Hecho con ❤️ para la comunidad de Falcon Foundry.</sub></p>
+<p align="center"><sub>Built with ❤️ for the Falcon Foundry community.</sub></p>

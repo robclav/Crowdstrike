@@ -5,135 +5,135 @@
 </p>
 
 <p align="center">
-  <strong>Dashboard unificado de gestión mensual de vulnerabilidades para CrowdStrike Falcon</strong>
+  <strong>Unified monthly vulnerability-management dashboard for CrowdStrike Falcon</strong>
 </p>
 
 <p align="center">
-  <a href="#características"><img src="https://img.shields.io/badge/Falcon-Foundry-ff0000" alt="Falcon Foundry"></a>
-  <img src="https://img.shields.io/badge/versión-v0.26.33-blue" alt="Versión">
-  <img src="https://img.shields.io/badge/licencia-MIT-green" alt="Licencia MIT">
+  <a href="#features"><img src="https://img.shields.io/badge/Falcon-Foundry-ff0000" alt="Falcon Foundry"></a>
+  <img src="https://img.shields.io/badge/version-v0.26.33-blue" alt="Version">
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License">
 </p>
 
 ---
 
-## 📖 Descripción
+## 📖 Overview
 
-**Network Vulnerability Assesment Dashboard** es una aplicación de [Falcon Foundry](https://www.crowdstrike.com/platform/falcon-foundry/) que unifica en una sola vista toda la información de gestión de exposición y vulnerabilidades disponible en la plataforma CrowdStrike Falcon:
+**Network Vulnerability Assesment Dashboard** is a [Falcon Foundry](https://www.crowdstrike.com/platform/falcon-foundry/) application that unifies, in a single view, all the exposure-management and vulnerability information available on the CrowdStrike Falcon platform:
 
-- 🔭 **Falcon Exposure Management (FEM)** — activos externos e internos
-- 🛰️ **Falcon Network Vulnerability Assessment (NVA / Network Scanner)** — escaneos de red, escáneres (appliances), redes/zonas y detecciones
-- 🎯 **Falcon Spotlight** — vulnerabilidades sobre hosts gestionados
-- 🧭 **Falcon Discover** — inventario de activos (managed/unmanaged)
-- 🚨 **Falcon Alerts v2** — alertas unificadas correlacionadas con hosts
-- 🔎 **Falcon NG-SIEM / LogScale** — búsquedas de telemetría a demanda
+- 🔭 **Falcon Exposure Management (FEM)** — external and internal assets
+- 🛰️ **Falcon Network Vulnerability Assessment (NVA / Network Scanner)** — network scans, scanners (appliances), networks/zones, and detections
+- 🎯 **Falcon Spotlight** — vulnerabilities on managed hosts
+- 🧭 **Falcon Discover** — asset inventory (managed/unmanaged)
+- 🚨 **Falcon Alerts v2** — unified alerts correlated with hosts
+- 🔎 **Falcon NG-SIEM / LogScale** — on-demand telemetry searches
 
-Pensada para equipos de VM/SecOps que necesitan una **vista mensual consolidada** sin tener que saltar entre consolas: mapa de red, timeline de descubrimiento, dashboard ejecutivo, listado de escaneos y detalle de vulnerabilidades, todo filtrable por rango temporal (24 h, 7 d, 30 d, 90 d).
+Designed for VM/SecOps teams that need a **consolidated monthly view** without jumping between consoles: network map, discovery timeline, executive dashboard, scans listing, and vulnerability detail — all filterable by time range (24 h, 7 d, 30 d, 90 d).
 
-## 📸 Capturas
+## 📸 Screenshots
 
-### Mapa de red interactivo
-Visualización ant-colony/isométrica de subredes, zonas y activos descubiertos por el Network Scanner.
+### Interactive network map
+Ant-colony / isometric visualization of subnets, zones, and assets discovered by the Network Scanner.
 
 <p align="center"><img src="docs/screenshots/01-network-map.png" alt="Network Map" width="800"></p>
 
-### Dashboard ejecutivo
-Resumen mensual con KPIs de exposición, severidad agregada y actividad del escáner.
+### Executive dashboard
+Monthly summary with exposure KPIs, aggregated severity, and scanner activity.
 
 <p align="center"><img src="docs/screenshots/02-dashboard.png" alt="Dashboard" width="800"></p>
 
-### Timeline de descubrimiento
-Histograma de descubrimiento de activos y feed de actividad correlacionado.
+### Discovery timeline
+Asset-discovery histogram and correlated activity feed.
 
 <p align="center"><img src="docs/screenshots/03-timeline.png" alt="Timeline" width="800"></p>
 
-### Vista de escaneos
-Listado de scans/scan-runs con detalle por appliance y filtros por estado.
+### Scans view
+Scans / scan-runs listing with per-appliance detail and status filters.
 
 <p align="center"><img src="docs/screenshots/04-scans.png" alt="Scans" width="800"></p>
 
-## ✨ Características
+## ✨ Features
 
-- **Mapa de red** con dos layouts: *ant-colony* (fuerza-dirigido) e *isométrico*.
-- **Timeline** con histograma de descubrimiento y drawer de evento por host.
-- **Dashboard** con KPIs por severidad, top CVEs y breakdown por fuente (NVA / Spotlight / FEM).
-- **Vista de escaneos** con detalle de scan-runs y correlación de detecciones.
-- **Vista de vulnerabilidades descubiertas** con búsqueda, filtros por severidad y drawer de detalle.
-- **Rangos temporales configurables** (24 h / 7 d / 30 d / 90 d) persistidos en localStorage.
-- **i18n** preparado para múltiples idiomas (EN/ES).
-- **Fallback a datos de demo** con banner claramente etiquetado cuando no hay datos reales.
+- **Network map** with two layouts: *ant-colony* (force-directed) and *isometric*.
+- **Timeline** with discovery histogram and per-host event drawer.
+- **Dashboard** with severity KPIs, top CVEs, and source breakdown (NVA / Spotlight / FEM).
+- **Scans view** with scan-run detail and detection correlation.
+- **Discovered-vulnerabilities view** with search, severity filters, and detail drawer.
+- **Configurable time ranges** (24 h / 7 d / 30 d / 90 d) persisted in localStorage.
+- **i18n** ready for multiple languages (EN/ES).
+- **Demo-data fallback** with a clearly labelled banner when live data is unavailable.
 
-## 📦 Contenido del repositorio
+## 📦 Repository contents
 
 ```
 .
 ├── dist/
-│   └── network-vulnerability-assesment-dashboard-v0.26.33.tar.gz   ← App empaquetada lista para subir a Foundry
+│   └── network-vulnerability-assesment-dashboard-v0.26.33.tar.gz   ← Packaged app ready to upload to Foundry
 ├── docs/
 │   ├── radar-logo.png
 │   └── screenshots/
 └── README.md
 ```
 
-> ℹ️ Este repositorio distribuye **únicamente el bundle empaquetado** de la aplicación (export de Foundry). El código fuente de desarrollo no está publicado aquí.
+> ℹ️ This repository ships **only the packaged bundle** (Foundry export). Development source code is not published here.
 
-## 🚀 Instalación
+## 🚀 Installation
 
-### Requisitos previos
+### Prerequisites
 
-- Tenant de CrowdStrike Falcon con **Falcon Foundry** habilitado.
-- Permisos de administrador para instalar apps desde el *App Catalog*.
-- Alcances (scopes) de API habilitados:
+- A CrowdStrike Falcon tenant with **Falcon Foundry** enabled.
+- Administrator permissions to install apps from the *App Catalog*.
+- Enabled API scopes:
   - `devices:read`
   - `alerts:read`
-  - `assets:read` *(usado por Discover y FEM)*
+  - `assets:read` *(used by Discover and FEM)*
   - `spotlight-vulnerabilities:read`
   - `network-vulnerability-assessment:read`
   - `humio-auth-proxy:read`
 
-### Pasos
+### Steps
 
-1. Descarga `dist/network-vulnerability-assesment-dashboard-v0.26.33.tar.gz` desde este repositorio.
-2. En la consola de Falcon, abre **Foundry → App Manager → Import app**.
-3. Selecciona el `.tar.gz` descargado y confirma la importación.
-4. Cuando la importación termine, Foundry lanzará el asistente de credenciales por cada integración API — proporciona un API Client con los scopes anteriores.
-5. Despliega (`Deploy`) y publica (`Release`) la app desde el App Manager.
-6. La app aparecerá en el launcher de Falcon.
+1. Download `dist/network-vulnerability-assesment-dashboard-v0.26.33.tar.gz` from this repository.
+2. In the Falcon console, open **Foundry → App Manager → Import app**.
+3. Select the downloaded `.tar.gz` and confirm the import.
+4. When the import completes, Foundry will launch the credential wizard for each API integration — provide an API Client with the scopes listed above.
+5. **Deploy** and **Release** the app from App Manager.
+6. The app will appear in the Falcon launcher.
 
-> 💡 Al importar en un tenant distinto, Foundry **regenera los IDs internos** (`app_id`, `page_id`, `api_integration_id`). Los valores presentes en el `manifest.yml` dentro del tar.gz son referencias originales que no afectan a la nueva instalación.
+> 💡 When imported into a different tenant, Foundry **regenerates the internal IDs** (`app_id`, `page_id`, `api_integration_id`). The values present in `manifest.yml` inside the tar.gz are the original references and do not affect the new installation.
 
-## 🧰 Stack técnico
+## 🧰 Tech stack
 
-- **Frontend**: React 18 + Vite, [Shoelace Design System](https://shoelace.style/) con tema Falcon
-- **SDK**: [Foundry-JS](https://developer.crowdstrike.com/foundry) para autenticación OAuth2 y llamadas a Falcon API
-- **Estado remoto**: TanStack Query (polling + caché con TTL por tipo de recurso)
+- **Frontend**: React 18 + Vite, [Shoelace Design System](https://shoelace.style/) with Falcon theme
+- **SDK**: [Foundry-JS](https://developer.crowdstrike.com/foundry) for OAuth2 and Falcon API calls
+- **Remote state**: TanStack Query (polling + per-resource TTL cache)
 - **i18n**: react-intl
 
-## 📝 Changelog destacado
+## 📝 Changelog highlights
 
-Las versiones recientes incluyen:
+Recent versions include:
 
-- **v0.26.33** — Mejoras en el mapa de red (zoom/pan refinado), optimización de queries NG-SIEM.
-- **v0.26.26** — Nuevo layout de mapa (`ant-colony` v2) con animación de descubrimiento.
-- **v0.26.16** — Timeline con histograma y drawer de evento.
-- **v0.26.0** — Reescritura del dashboard con secciones colapsables.
-- **v0.25.x** — Primer soporte Spotlight + banner de datos demo.
+- **v0.26.33** — Network map improvements (refined zoom/pan), NG-SIEM query optimization.
+- **v0.26.26** — New map layout (`ant-colony` v2) with discovery animation.
+- **v0.26.16** — Timeline with histogram and event drawer.
+- **v0.26.0** — Dashboard rewrite with collapsible sections.
+- **v0.25.x** — First Spotlight support + demo-data banner.
 
-## 🔐 Seguridad
+## 🔐 Security
 
-Si descubres una vulnerabilidad en la aplicación, por favor **no abras un issue público** — contacta directamente al autor.
+If you find a vulnerability in the application, please **do not open a public issue** — contact the author directly.
 
-Esta aplicación es un desarrollo **community/personal** y no es un producto oficial de CrowdStrike.
+This application is a **community/personal** development and is not an official CrowdStrike product.
 
-## 📄 Licencia
+## 📄 License
 
-Distribuido bajo licencia [MIT](LICENSE).
+Distributed under the [MIT](LICENSE) license.
 
-CrowdStrike®, Falcon® y los nombres de productos relacionados son marcas registradas de CrowdStrike, Inc. Este proyecto es independiente y no está respaldado oficialmente por CrowdStrike.
+CrowdStrike®, Falcon®, and related product names are registered trademarks of CrowdStrike, Inc. This project is independent and is not officially endorsed by CrowdStrike.
 
-## 👤 Autor
+## 👤 Author
 
 **Roberto Clavero**
 
 ---
 
-<p align="center"><sub>Hecho con ❤️ para la comunidad de Falcon Foundry.</sub></p>
+<p align="center"><sub>Built with ❤️ for the Falcon Foundry community.</sub></p>

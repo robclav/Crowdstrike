@@ -1,23 +1,23 @@
 name: 🐛 Bug report
-description: Reporta un problema con la aplicación
+description: Report a problem with the application
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Gracias por reportar un bug. Rellena los campos para que podamos reproducirlo rápidamente.
+        Thanks for reporting a bug. Please fill in the fields below so we can reproduce it quickly.
   - type: input
     id: version
     attributes:
-      label: Versión de la app
-      description: ¿Qué versión del `.tar.gz` instalaste? (p. ej. `v0.26.33`)
+      label: App version
+      description: Which version of the `.tar.gz` did you install? (e.g. `v0.26.33`)
       placeholder: v0.26.33
     validations:
       required: true
   - type: input
     id: cloud
     attributes:
-      label: Falcon cloud / región
+      label: Falcon cloud / region
       description: us-1 / us-2 / eu-1 / us-gov-1
       placeholder: us-2
     validations:
@@ -25,29 +25,29 @@ body:
   - type: textarea
     id: describe
     attributes:
-      label: Descripción del problema
-      description: ¿Qué ocurre? ¿Qué esperabas que ocurriese?
+      label: Problem description
+      description: What happens? What did you expect to happen?
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Pasos para reproducir
+      label: Steps to reproduce
       placeholder: |
-        1. Abro la app
-        2. Voy a la vista Network Map
-        3. Veo el error...
+        1. Open the app
+        2. Go to the Network Map view
+        3. Error appears...
     validations:
       required: true
   - type: textarea
     id: screenshots
     attributes:
-      label: Capturas / logs
-      description: Opcional pero útil. **No incluyas datos sensibles** (asset IDs, IPs internas, hostnames reales).
+      label: Screenshots / logs
+      description: Optional but useful. **Do not include sensitive data** (asset IDs, internal IPs, real hostnames).
   - type: checkboxes
     id: no-secrets
     attributes:
-      label: Confirmación
+      label: Confirmation
       options:
-        - label: He revisado que mi reporte no contiene credenciales, tokens, IPs internas ni identificadores de hosts reales.
+        - label: I have verified my report contains no credentials, tokens, internal IPs, or real host identifiers.
           required: true

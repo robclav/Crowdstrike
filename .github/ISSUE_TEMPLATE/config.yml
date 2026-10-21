@@ -2,7 +2,7 @@ blank_issues_enabled: false
 contact_links:
   - name: 📚 CrowdStrike Developer Portal
     url: https://developer.crowdstrike.com/
-    about: Documentación oficial de la Falcon API y Falcon Foundry.
-  - name: 🔐 Reporte de seguridad
+    about: Official documentation for the Falcon API and Falcon Foundry.
+  - name: 🔐 Security report
     url: https://github.com/robclav/Crowdstrike/security/advisories/new
-    about: Reporta vulnerabilidades de forma privada en lugar de abrir un issue público.
+    about: Report vulnerabilities privately instead of opening a public issue.

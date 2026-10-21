@@ -1,18 +1,18 @@
-# Resumen
+# Summary
 
-<!-- Describe qué cambia y por qué. -->
+<!-- Describe what changes and why. -->
 
-## Tipo de cambio
+## Type of change
 
 - [ ] 🐛 Bug fix
-- [ ] ✨ Nueva funcionalidad
-- [ ] 📝 Documentación
-- [ ] 🔧 Refactor / mantenimiento
-- [ ] 📦 Nuevo bundle de la app (`dist/*.tar.gz`)
+- [ ] ✨ New feature
+- [ ] 📝 Documentation
+- [ ] 🔧 Refactor / maintenance
+- [ ] 📦 New app bundle (`dist/*.tar.gz`)
 
 ## Checklist
 
-- [ ] He bumpado la versión en el nombre del `.tar.gz` si procede
-- [ ] He actualizado el README si cambian capturas o features
-- [ ] He revisado que el bundle **no contiene secretos** (credenciales, tokens, IPs internas, nombres de tenant)
-- [ ] He testeado la importación en un tenant limpio
+- [ ] Bumped the version in the `.tar.gz` filename if applicable
+- [ ] Updated the README if screenshots or features changed
+- [ ] Verified the bundle **contains no secrets** (credentials, tokens, internal IPs, tenant names)
+- [ ] Tested the import on a clean tenant
