@@ -1,0 +1,23 @@
+name: 💡 Feature request
+description: Propón una mejora o nueva funcionalidad
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema que resuelve
+      description: ¿Qué dolor del usuario estás intentando aliviar?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Propuesta
+      description: ¿Cómo imaginas la solución? Incluye mockups si los tienes.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas consideradas
+      description: ¿Hay otras formas de resolverlo?
