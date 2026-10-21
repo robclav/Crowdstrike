@@ -133,7 +133,7 @@ Esta aplicación es un desarrollo **community/personal** y no es un producto ofi
 
 ## 📄 Licencia
 
-Distribuido bajo licencia [MIT](../LICENSE).
+Distribuido bajo licencia [MIT](LICENSE).
 
 CrowdStrike®, Falcon® y los nombres de productos relacionados son marcas registradas de CrowdStrike, Inc. Este proyecto es independiente y no está respaldado oficialmente por CrowdStrike.
 

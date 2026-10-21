@@ -16,7 +16,7 @@ Repositorio público con bundles empaquetados (`.tar.gz`) de aplicaciones [Falco
 Cada app lleva su propia licencia y política de seguridad:
 
 - NVA: [LICENSE](NVA/LICENSE) · [SECURITY.md](NVA/SECURITY.md)
-- soc-dashboard: ver [soc-dashboard/](soc-dashboard/)
+- soc-dashboard: [LICENSE](soc-dashboard/LICENSE) · [SECURITY.md](soc-dashboard/SECURITY.md)
 
 ## Autor
 
