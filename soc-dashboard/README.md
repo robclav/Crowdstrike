@@ -35,7 +35,15 @@ The dashboard auto-refreshes every ~1 minute. Each widget surfaces a status indi
 
 ## 📸 Screenshots
 
-<p align="center"><img src="docs/screenshots/01-dashboard-overview.png" alt="Dashboard Overview" width="900"></p>
+<p align="center">
+  <img src="docs/screenshots/01-dashboard-dark.png" alt="Dashboard — Dark theme" width="900">
+  <br><sub><em>Dark theme</em></sub>
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/02-dashboard-light.png" alt="Dashboard — Light theme" width="900">
+  <br><sub><em>Light theme</em></sub>
+</p>
 
 ## ✨ Widgets (15 total)
 
